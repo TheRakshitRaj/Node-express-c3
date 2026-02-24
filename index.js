@@ -1,10 +1,9 @@
-import express from "express";
-const cors = require('cors') ;
+import express from 'express';
+import cors from 'cors';
 
-app.use(cors());
+const app = express();   // ✅ create app first
 
-
-const app = express();
+app.use(cors());         // ✅ then use cors
 app.use(express.json());
 
 const users = [
